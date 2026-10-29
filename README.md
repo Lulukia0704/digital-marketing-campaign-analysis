@@ -44,7 +44,7 @@ Dashboard interaktif dibuat menggunakan Google Looker Studio untuk menyajikan in
 
 ### Pratinjau Dashboard
 
-![Digital Marketing Campaign Dashboard](dashboard/dashboard_preview.png)
+![Digital Marketing Campaign Dashboard](dashboard/Dashboard_Preview.png)
 
 🔗 **[Lihat Dashboard Interaktif di Google Looker Studio](https://datastudio.google.com/reporting/e8f28b3c-1ea1-4a8f-9975-ddd778578032)**
 
