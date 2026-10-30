@@ -4,9 +4,9 @@
 
 Proyek ini bertujuan untuk mengevaluasi performa kampanye digital marketing dan menganalisis efisiensi penggunaan anggaran iklan pada berbagai kanal pemasaran.
 
-Dengan memanfaatkan data kampanye iklan, proyek ini berfokus pada analisis interaksi audiens, perbandingan efisiensi antar-channel, tren performa kampanye, serta penggunaan anggaran untuk membantu perusahaan mengambil keputusan bisnis berbasis data.
+Dengan memanfaatkan data kampanye iklan, proyek ini berfokus pada analisis interaksi audiens, perbandingan efisiensi antar-channel, tren performa kampanye, serta penggunaan anggaran untuk mendukung pengambilan keputusan bisnis berbasis data.
 
-Proses analisis meliputi pembersihan data menggunakan Python dan Pandas di Google Colab, kemudian visualisasi hasil analisis menggunakan Google Looker Studio.
+Proses analisis meliputi pengolahan dan pembersihan data menggunakan Python dan Pandas di Google Colab, kemudian visualisasi hasil analisis menggunakan Google Looker Studio.
 
 ## 🎯 Tujuan Analisis
 
@@ -40,7 +40,7 @@ Proses analisis meliputi pembersihan data menggunakan Python dan Pandas di Googl
 
 ## 📊 Dashboard
 
-Dashboard interaktif dibuat menggunakan Google Looker Studio untuk menyajikan indikator performa kampanye dan efisiensi anggaran dalam bentuk visualisasi yang mudah dipahami.
+Dashboard interaktif dibuat menggunakan Google Looker Studio untuk menyajikan indikator performa kampanye, efisiensi biaya antar-kanal pemasaran, tren klik, serta penggunaan anggaran.
 
 ### Pratinjau Dashboard
 
@@ -50,47 +50,65 @@ Dashboard interaktif dibuat menggunakan Google Looker Studio untuk menyajikan in
 
 ## 📈 Metrik yang Dianalisis
 
-| Metrik | Penjelasan |
-|---|---|
-| Total Spend | Total biaya iklan yang dikeluarkan. |
-| Total Clicks | Total klik yang dihasilkan oleh kampanye. |
-| Click-Through Rate (CTR) | Persentase impresi yang menghasilkan klik. |
-| Cost Per Click (CPC) | Rata-rata biaya untuk memperoleh satu klik. |
-| Cost Per Mille (CPM) | Biaya per 1.000 impresi. |
-| Allocated Budget | Anggaran yang dialokasikan untuk kampanye. |
-| Actual Spend | Pengeluaran aktual kampanye. |
-| Remaining Budget | Sisa anggaran setelah dikurangi pengeluaran aktual. |
+| Metrik | Hasil | Penjelasan |
+|---|---:|---|
+| Total Spend | $858.27K | Total biaya iklan yang dikeluarkan. |
+| Total Clicks | 3.8M | Total klik yang dihasilkan kampanye. |
+| CTR | 3.85% | Persentase impresi yang menghasilkan klik. |
+| CPM | $8.63 | Biaya per 1.000 impresi. |
+| CPC | Berdasarkan channel | Rata-rata biaya untuk memperoleh satu klik. |
+| Allocated Budget | Per kampanye | Anggaran yang dialokasikan. |
+| Actual Spend | Per kampanye | Pengeluaran aktual kampanye. |
+| Remaining Budget | Per kampanye | Sisa anggaran setelah dikurangi pengeluaran aktual. |
 
 ## 💡 Temuan Utama
 
-Berdasarkan hasil yang ditampilkan pada dashboard:
+Berdasarkan hasil visualisasi pada dashboard, diperoleh beberapa temuan:
 
-- **Efisiensi kanal:** Kanal Display tercatat sebagai kanal dengan efisiensi biaya terbaik pada dashboard.
-- **Tren performa:** Kampanye menunjukkan performa yang lebih kuat pada hari kerja dibandingkan akhir pekan.
-- **Penggunaan anggaran:** Sebagian besar kampanye masih berada di bawah anggaran yang telah dialokasikan.
+1. **Efisiensi Kanal Pemasaran**
 
-Temuan tersebut dapat digunakan sebagai dasar evaluasi awal untuk menentukan kanal pemasaran yang perlu dioptimalkan dan kampanye yang membutuhkan peninjauan anggaran lebih lanjut.
+   Channel Display menunjukkan efisiensi biaya terbaik dibandingkan channel lainnya. Display memiliki CTR tertinggi sekaligus CPC terendah, sehingga mampu menghasilkan interaksi iklan dengan biaya per klik yang relatif lebih rendah.
+
+2. **Perbandingan Performa Hari Kerja dan Akhir Pekan**
+
+   Kampanye menunjukkan performa yang lebih baik pada hari kerja (weekday), dengan CTR sekitar 3,9%, dibandingkan akhir pekan (weekend) sekitar 3,6%. Selain itu, CPC pada hari kerja juga lebih rendah, yaitu sekitar $0,22 dibandingkan $0,24 pada akhir pekan.
+
+3. **Tren Performa Klik**
+
+   Tren klik menunjukkan adanya lonjakan aktivitas yang signifikan pada akhir Agustus hingga awal September. Setelah periode tersebut, aktivitas klik mengalami penurunan dan menunjukkan fluktuasi pada periode berikutnya.
+
+4. **Penggunaan Anggaran Kampanye**
+
+   Sebagian besar kampanye belum menggunakan seluruh anggaran yang dialokasikan. Hal ini terlihat dari nilai Remaining Budget yang masih positif pada mayoritas kampanye dalam dashboard, sehingga terdapat ruang untuk mengevaluasi kembali alokasi dan pemanfaatan anggaran iklan.
+
+Temuan tersebut dapat menjadi bahan evaluasi dalam menentukan kanal pemasaran yang lebih efisien, mengoptimalkan waktu penayangan kampanye, serta meningkatkan efektivitas penggunaan anggaran iklan.
 
 ## ⚠️ Batasan Analisis
 
 Analisis ini berfokus pada performa interaksi iklan, efisiensi biaya, dan penggunaan anggaran.
 
-Dataset yang ditampilkan belum menyediakan metrik konversi dan pendapatan penjualan. Oleh karena itu, analisis ini belum dapat memastikan efektivitas kampanye dalam menghasilkan penjualan, Return on Advertising Spend (ROAS), atau profitabilitas secara keseluruhan.
+Dataset yang digunakan belum menyediakan metrik konversi dan pendapatan penjualan. Oleh karena itu, analisis ini belum dapat memastikan efektivitas kampanye dalam menghasilkan penjualan, Return on Advertising Spend (ROAS), atau profitabilitas secara keseluruhan.
 
 ## 📁 Struktur Proyek
 
 ```text
 digital-marketing-campaign-analysis/
+│
 ├── README.md
-├── notebooks/
-│   └── marketing_data_cleaning.ipynb
+│
 ├── dashboard/
-│   └── dashboard_preview.png
-└── data/
-    └── README.md
+│   ├── README.md
+│   └── dashboard_preview.jpg
+│
+├── data/
+│   ├── README.md
+│   ├── Marketing_campaign.csv
+│   └── clean_marketing_data.csv
+│
+└── notebooks/
+    ├── README.md
+    └── marketing_data_cleaning.ipynb
 ```
-
-*Struktur di atas merupakan rekomendasi. Sesuaikan nama dan lokasi file dengan isi repository yang sebenarnya.*
 
 ## 👩‍💻 Tentang Penulis
 
