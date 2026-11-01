@@ -31,12 +31,26 @@ Proses analisis meliputi pengolahan dan pembersihan data menggunakan Python dan 
 - Bagaimana perbandingan anggaran yang dialokasikan dengan pengeluaran aktual?
 - Kampanye mana yang memiliki sisa anggaran paling besar?
 
+## 🧹 Langkah Pembersihan Data
+1. Memilih 11 kolom yang relevan dari 32 kolom dataset asli.
+2. Mengonversi tipe data (misalnya kolom tanggal). [ISI: konfirmasi]
+3. [ISI: langkah lain, misalnya memeriksa nilai kosong, duplikat, atau membuat kolom weekday/weekend]
+4. Menyimpan hasil ke `clean_marketing_data.csv`.
+
+Detail kode ada di `notebooks/marketing_data_cleaning.ipynb`.
+
 ## 🛠️ Tools dan Teknologi
 
 - **Python** — Pengolahan dan persiapan data.
 - **Pandas** — Manipulasi dan pembersihan data.
 - **Google Colab** — Lingkungan untuk menjalankan kode Python.
 - **Google Looker Studio** — Visualisasi data dan pembuatan dashboard interaktif.
+
+## 📦 Sumber Data
+Dataset publik dari Kaggle: *Marketing Campaign Dataset* (Rahul Chavan). Bukan data perusahaan sungguhan.
+- **Periode data:** [ISI: tahun, 1 Mei – akhir November]
+- **Ukuran:** 32 kolom pada dataset asli; 11 kolom dipilih untuk analisis ini.
+- **Lisensi:** [ISI: lisensi di halaman Kaggle]
 
 ## 📊 Dashboard
 
@@ -62,26 +76,19 @@ Dashboard interaktif dibuat menggunakan Google Looker Studio untuk menyajikan in
 | Remaining Budget | Per kampanye | Sisa anggaran setelah dikurangi pengeluaran aktual. |
 
 ## 💡 Temuan Utama
+Berdasarkan hasil visualisasi pada dashboard:
 
-Berdasarkan hasil visualisasi pada dashboard, diperoleh beberapa temuan:
+**Efisiensi Kanal Pemasaran**
+Display memiliki CTR tertinggi (≈3,95%) sekaligus CPC terendah (≈$0,22) di antara lima channel. Namun selisih antar channel relatif kecil (CTR sekitar 3,70–3,95%; CPC sekitar $0,217–$0,234), dan perbedaannya belum diuji secara statistik.
 
-1. **Efisiensi Kanal Pemasaran**
+**Perbandingan Hari Kerja dan Akhir Pekan**
+Kampanye cenderung berperforma lebih baik pada hari kerja: CTR sekitar 3,9% dibanding sekitar 3,6% pada akhir pekan, dengan CPC sekitar $0,22 dibanding $0,24. Perbedaan ini juga belum diuji secara statistik.
 
-   Channel Display menunjukkan efisiensi biaya terbaik dibandingkan channel lainnya. Display memiliki CTR tertinggi sekaligus CPC terendah, sehingga mampu menghasilkan interaksi iklan dengan biaya per klik yang relatif lebih rendah.
+**Tren Performa Klik**
+Terdapat lonjakan klik yang signifikan pada akhir Agustus hingga awal September, kemudian menurun dan berfluktuasi pada periode berikutnya.
 
-2. **Perbandingan Performa Hari Kerja dan Akhir Pekan**
-
-   Kampanye menunjukkan performa yang lebih baik pada hari kerja (weekday), dengan CTR sekitar 3,9%, dibandingkan akhir pekan (weekend) sekitar 3,6%. Selain itu, CPC pada hari kerja juga lebih rendah, yaitu sekitar $0,22 dibandingkan $0,24 pada akhir pekan.
-
-3. **Tren Performa Klik**
-
-   Tren klik menunjukkan adanya lonjakan aktivitas yang signifikan pada akhir Agustus hingga awal September. Setelah periode tersebut, aktivitas klik mengalami penurunan dan menunjukkan fluktuasi pada periode berikutnya.
-
-4. **Penggunaan Anggaran Kampanye**
-
-   Sebagian besar kampanye belum menggunakan seluruh anggaran yang dialokasikan. Hal ini terlihat dari nilai Remaining Budget yang masih positif pada mayoritas kampanye dalam dashboard, sehingga terdapat ruang untuk mengevaluasi kembali alokasi dan pemanfaatan anggaran iklan.
-
-Temuan tersebut dapat menjadi bahan evaluasi dalam menentukan kanal pemasaran yang lebih efisien, mengoptimalkan waktu penayangan kampanye, serta meningkatkan efektivitas penggunaan anggaran iklan.
+**Penggunaan Anggaran**
+Dari 157 kampanye, tidak ada yang melebihi anggaran yang dialokasikan; sisa anggaran terkecil adalah $11,72 (Campaign ID 3033). Sisa terbesar ada pada kampanye [ISI: Campaign ID] sebesar $4.005.241,93, atau baru sekitar 1% dari anggaran $4.047.340 yang terpakai.
 
 ## ⚠️ Batasan Analisis
 
@@ -111,7 +118,8 @@ digital-marketing-campaign-analysis/
 ```
 
 ## 👩‍💻 Tentang Penulis
-
-**Luluk Asti**
+**Luluk Asti Qomariah**, lulusan S1 Informatika UMSIDA 2026 yang berfokus pada analisis data.
+- LinkedIn: https://www.linkedin.com/in/luluk-asti-q/
+- GitHub: https://github.com/Lulukia0704
 
 Proyek ini merupakan bagian dari portofolio analisis data yang berfokus pada pengolahan data, visualisasi, dan penerapan analisis untuk mendukung pengambilan keputusan bisnis.
