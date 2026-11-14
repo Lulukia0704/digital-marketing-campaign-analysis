@@ -32,7 +32,7 @@ Proses analisis meliputi pengolahan dan pembersihan data menggunakan Python dan 
 - Kampanye mana yang memiliki sisa anggaran paling besar?
 
 ## 🧹 Langkah Pembersihan Data
-1. Memilih 11 kolom yang relevan dari 32 kolom dataset asli.
+1. Memilih 11 kolom yang relevan dari 35 kolom dataset asli.
 2. Mengonversi tipe data (misalnya kolom tanggal). [ISI: konfirmasi]
 3. [ISI: langkah lain, misalnya memeriksa nilai kosong, duplikat, atau membuat kolom weekday/weekend]
 4. Menyimpan hasil ke `clean_marketing_data.csv`.
@@ -49,7 +49,7 @@ Detail kode ada di `notebooks/marketing_data_cleaning.ipynb`.
 ## 📦 Sumber Data
 Dataset publik dari Kaggle: *Marketing Campaign Dataset* (Rahul Chavan). Bukan data perusahaan sungguhan.
 - **Periode data:** [ISI: tahun, 1 Mei – akhir November]
-- **Ukuran:** 32 kolom pada dataset asli; 11 kolom dipilih untuk analisis ini.
+- **Ukuran:** 35 kolom pada dataset asli; 11 kolom dipilih untuk analisis ini.
 - **Lisensi:** [ISI: lisensi di halaman Kaggle]
 
 ## 📊 Dashboard
